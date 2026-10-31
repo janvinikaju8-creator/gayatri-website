@@ -1,0 +1,123 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages For Dii 💌</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .messages-page {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .message-card {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px #00000010;
+        }
+
+        .message-card button {
+            background: #d66c98;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .hidden-message {
+            display: none;
+            color: #a34f72;
+            margin-top: 18px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Dii's World 💗</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="letter.html">My Letter</a>
+            <a href="memories.html">Memories</a>
+            <a href="special.html">Special</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="messages.html">Messages</a>
+            <a href="surprise.html">Surprise</a>
+        </div>
+    </nav>
+
+    <main class="messages-page">
+
+        <h1>A Few Things I Want You to Remember 💌</h1>
+        <p>Some words for the moments when you need them most.</p>
+
+        <div class="message-card">
+            <h3>When life feels difficult 🤍</h3>
+            <button onclick="revealMessage('msg1')">Read this</button>
+            <p class="hidden-message" id="msg1">
+                You don't have to be strong every single day.
+                Take your time, breathe and remember that you
+                never have to face everything alone. I'm here.
+            </p>
+        </div>
+
+        <div class="message-card">
+            <h3>When you question your abilities 🌷</h3>
+            <button onclick="revealMessage('msg2')">Read this</button>
+            <p class="hidden-message" id="msg2">
+                Don't underestimate how far your efforts can
+                take you. Keep learning, keep trying and trust
+                yourself. Your journey is worth believing in.
+            </p>
+        </div>
+
+        <div class="message-card">
+            <h3>When your dreams feel far away ✨</h3>
+            <button onclick="revealMessage('msg3')">Read this</button>
+            <p class="hidden-message" id="msg3">
+                You don't need to have every answer today.
+                Keep taking small steps towards the life you
+                want. I hope you achieve everything you work for.
+            </p>
+        </div>
+
+        <div class="message-card">
+            <h3>Something I never want you to forget ❤️</h3>
+            <button onclick="revealMessage('msg4')">Read this</button>
+            <p class="hidden-message" id="msg4">
+                No achievement, distance or change in life
+                could ever make you less important to me.
+                You are my Dii, and I will always love you.
+            </p>
+        </div>
+
+        <a href="index.html" class="btn">Back to Home</a>
+
+    </main>
+
+    <script>
+        function revealMessage(id) {
+            const message = document.getElementById(id);
+
+            if (message.style.display === "block") {
+                message.style.display = "none";
+            } else {
+                message.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
+```

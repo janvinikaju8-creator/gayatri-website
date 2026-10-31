@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter For Dii 💌</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .letter-page {
+            min-height: 90vh;
+            padding: 70px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff0f4, #fffaf5);
+        }
+
+        .envelope {
+            font-size: 85px;
+            cursor: pointer;
+            display: inline-block;
+            transition: transform .4s;
+            margin: 30px;
+        }
+
+        .envelope:hover {
+            transform: scale(1.15) rotate(-8deg);
+        }
+
+        .personal-letter {
+            display: none;
+            max-width: 750px;
+            margin: 35px auto;
+            padding: 45px;
+            text-align: left;
+            background: #fffdf8;
+            border: 1px solid #f0dce2;
+            border-radius: 5px;
+            box-shadow: 0 15px 45px #75475b20;
+            animation: letterOpen 1s ease;
+            line-height: 2;
+        }
+
+        .personal-letter h2 {
+            color: #bd6384;
+            font-family: 'Pacifico', cursive;
+            margin-bottom: 25px;
+        }
+
+        .personal-letter p {
+            margin-bottom: 20px;
+            color: #755966;
+        }
+
+        .personal-letter .ending {
+            font-family: 'Pacifico', cursive;
+            color: #bd6384;
+            font-size: 20px;
+        }
+
+        .letter-btn {
+            border: none;
+            padding: 14px 25px;
+            border-radius: 30px;
+            background: #bd6384;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @keyframes letterOpen {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media(max-width: 600px) {
+            .personal-letter {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">Dii's World ♡</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="letter.html">My Letter</a>
+        <a href="memories.html">Memories</a>
+        <a href="special.html">Special</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="messages.html">Messages</a>
+        <a href="surprise.html">Surprise</a>
+    </div>
+</nav>
+
+<section class="letter-page">
+
+    <p class="eyebrow">A LITTLE SOMETHING FROM MY HEART</p>
+
+    <h1 style="font-family:'Playfair Display';">
+        A letter for <span style="color:#bd6384;">Dii 💗</span>
+    </h1>
+
+    <p>There are a few things I don't say often enough...</p>
+
+    <div class="envelope" onclick="openMyLetter()">
+        💌
+    </div>
+
+    <p>Click the envelope to read your letter.</p>
+
+ 
+<article class="personal-letter" id="myLetter">
+
+    <h2>Dear Dii, 💗</h2>
+
+    <p>
+        I may not express it every day, but having you
+        in my life is something I will always be grateful for. 🥹
+    </p>
+
+    <p>
+        We've shared so many moments together. Some were
+        ordinary, some unforgettable, and some that only
+        we could ever understand. Every one of them has
+        become a part of our story. 📸
+    </p>
+
+    <p>
+        One thing I truly admire about you is your
+        determination. I see how focused you are on your
+        studies, your future and the life you want to build
+        for yourself. ✨
+    </p>
+
+    <p>
+        I hope you never stop dreaming big. Whether you
+        discover a new passion, start your own business
+        or take a completely different path, I hope you
+        always have the courage to follow what you believe in. 🌷
+    </p>
+
+    <p>
+        I wish you success, independence, happiness and
+        the confidence to handle every challenge that
+        comes your way. You deserve to see your hard work
+        turn into something beautiful. 🌟
+    </p>
+
+    <p>
+        And remember, you don't have to have everything
+        figured out right now. Take your time, learn,
+        explore and grow. I'll always be cheering for you. 🤍
+    </p>
+
+    <p>
+        No matter how much life changes or how busy we
+        become, I hope we always make time for each other.
+        Some bonds are too precious to be affected by time
+        or distance. 🫂
+    </p>
+
+    <p class="ending">
+        I love you, Dii. Always believe in yourself. ❤️
+        <br><br>
+        With all my love,<br>
+        Your forever supporter ♡
+    </p>
+
+</article>
+
+    <br>
+
+    <button class="letter-btn"
+        onclick="window.location.href='index.html'">
+        Back to Home
+    </button>
+
+</section>
+
+<footer>
+    Made with love, just for Dii 💗
+</footer>
+
+<script>
+    function openMyLetter() {
+        const letter = document.getElementById("myLetter");
+
+        letter.style.display = "block";
+
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        document.querySelector(".envelope").innerHTML = "💗";
+    }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

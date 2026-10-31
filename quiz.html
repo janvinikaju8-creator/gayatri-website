@@ -1,0 +1,293 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Quiz About Dii 💗</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .quiz-page {
+            max-width: 750px;
+            margin: 45px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .quiz-card {
+            background: white;
+            padding: 25px;
+            margin: 22px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #00000010;
+            text-align: left;
+        }
+
+        .quiz-card h3 {
+            color: #a34f72;
+            margin-bottom: 18px;
+        }
+
+        .option {
+            display: block;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: 1px solid #e9b5ca;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #765866;
+            transition: 0.2s;
+        }
+
+        .option:hover {
+            background: #fff0f5;
+        }
+
+        .option input {
+            margin-right: 10px;
+            accent-color: #d66c98;
+        }
+
+        #result {
+            display: none;
+            background: #fff0f5;
+            padding: 25px;
+            margin-top: 25px;
+            border-radius: 15px;
+            color: #765866;
+        }
+
+        .quiz-button {
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Dii's World 💗</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="letter.html">My Letter</a>
+            <a href="memories.html">Memories</a>
+            <a href="special.html">Special</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="messages.html">Messages</a>
+            <a href="surprise.html">Surprise</a>
+        </div>
+    </nav>
+
+    <main class="quiz-page">
+
+        <h1>How Well Do You Know Dii? 💗</h1>
+        <p>Five questions, a little thinking and lots of sisterly love.</p>
+
+        <form id="quizForm">
+
+            <div class="quiz-card">
+                <h3>01. What is one thing Dii takes seriously?</h3>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="a">
+                    Her studies and future goals
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="b">
+                    Winning every argument
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="c">
+                    Avoiding responsibilities
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="d">
+                    Doing everything at the last minute
+                </label>
+            </div>
+
+            <div class="quiz-card">
+                <h3>02. What is something Dii dreams of doing?</h3>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="a">
+                    Depending on others for everything
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="b">
+                    Building something of her own
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="c">
+                    Giving up on her ambitions
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="d">
+                    Avoiding new opportunities
+                </label>
+            </div>
+
+            <div class="quiz-card">
+                <h3>03. Has Dii decided what business she wants to start?</h3>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="a">
+                    Yes, a clothing business
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="b">
+                    Yes, a food business
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="c">
+                    Not yet, she is still exploring ideas
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="d">
+                    She has no interest in business
+                </label>
+            </div>
+
+            <div class="quiz-card">
+                <h3>04. What matters when building a future?</h3>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="a">
+                    Having everything figured out immediately
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="b">
+                    Never making mistakes
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="c">
+                    Comparing your journey with everyone else
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="d">
+                    Learning, growing and staying determined
+                </label>
+            </div>
+
+            <div class="quiz-card">
+                <h3>05. What should Dii always remember?</h3>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="a">
+                    She has to be perfect
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="b">
+                    She is loved and supported, whatever her journey
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="c">
+                    She should never change her plans
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="d">
+                    She must do everything alone
+                </label>
+            </div>
+
+            <button type="submit" class="btn quiz-button">
+                Submit My Answers 💗
+            </button>
+
+        </form>
+
+        <div id="result">
+            <h2 id="score"></h2>
+            <p id="message"></p>
+            <button type="button" class="btn quiz-button" onclick="restartQuiz()">
+                Try Again
+            </button>
+        </div>
+
+        <br>
+        <a href="index.html" class="btn">Back to Home</a>
+
+    </main>
+
+    <script>
+        const correctAnswers = {
+            q1: "a",
+            q2: "b",
+            q3: "c",
+            q4: "d",
+            q5: "b"
+        };
+
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let total = 0;
+            let unanswered = false;
+
+            for (let question in correctAnswers) {
+                const selected = document.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
+
+                if (!selected) {
+                    unanswered = true;
+                    break;
+                }
+
+                if (selected.value === correctAnswers[question]) {
+                    total++;
+                }
+            }
+
+            if (unanswered) {
+                alert("Please answer all five questions first! 💗");
+                return;
+            }
+
+            document.getElementById("quizForm").style.display = "none";
+            document.getElementById("result").style.display = "block";
+
+            document.getElementById("score").textContent =
+                "You scored " + total + " out of 5!";
+
+            let message = "";
+
+            if (total === 5) {
+                message = "Perfect! You really know Dii and understand what matters to her. ❤️";
+            } else if (total >= 3) {
+                message = "Pretty good! There is always more to discover about someone you love. 🌷";
+            } else {
+                message = "Looks like there is still more to learn about Dii. Spend some time together and make more memories! 💗";
+            }
+
+            document.getElementById("message").textContent = message;
+        });
+
+        function restartQuiz() {
+            document.getElementById("quizForm").reset();
+            document.getElementById("quizForm").style.display = "block";
+            document.getElementById("result").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
+```

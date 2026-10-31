@@ -1,0 +1,122 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Surprise for Dii 🎁</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .surprise-page {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .gift {
+            font-size: 100px;
+            margin: 20px;
+            animation: bounce 1.5s infinite;
+        }
+
+        .surprise-button {
+            border: none;
+            padding: 15px 30px;
+            background: #d66c98;
+            color: white;
+            font-size: 17px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        #surprise-message {
+            display: none;
+            max-width: 600px;
+            margin-top: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px #00000015;
+            color: #a34f72;
+            line-height: 1.8;
+        }
+
+        @keyframes bounce {
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Dii's World 💗</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="letter.html">My Letter</a>
+            <a href="memories.html">Memories</a>
+            <a href="special.html">Special</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="messages.html">Messages</a>
+            <a href="surprise.html">Surprise</a>
+        </div>
+    </nav>
+
+    <main class="surprise-page">
+        <h1>A Little Something for You, Dii 💗</h1>
+
+        <div class="gift">🎁</div>
+
+        <p>A small reminder of how much you mean to me.</p>
+
+        <button class="surprise-button" onclick="openSurprise()">
+            Open Your Surprise 💝
+        </button>
+
+        <div id="surprise-message">
+            <h2>For My Dii 🥹❤️</h2>
+
+            <p>
+                No matter how much life changes, how busy we become,
+                or how far our dreams take us, I hope you always know
+                how important you are to me.
+            </p>
+
+            <p>
+                I admire your determination, your ambitions and the
+                way you keep working towards the life you want.
+                I hope you get every opportunity you deserve and
+                build a future that makes you genuinely happy.
+            </p>
+
+            <p>
+                We may not say it every day, but I am grateful to
+                have you as my sister. Through every little moment,
+                every disagreement and every new chapter, I'll
+                always be cheering for you.
+            </p>
+
+            <h2>Always proud of you, Dii. 🤍</h2>
+            <p>Love you, always. 🫂❤️</p>
+        </div>
+
+        <br>
+        <a href="index.html" class="btn">Back to Home</a>
+    </main>
+
+    <script>
+        function openSurprise() {
+            const message = document.getElementById("surprise-message");
+            message.style.display = "block";
+            message.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+</body>
+</html>
+```

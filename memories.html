@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories 💗</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .memories-page {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .memory-card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px #00000012;
+            transform: rotate(-2deg);
+        }
+
+        .memory-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .memory-photo {
+            height: 210px;
+            background: #fce1eb;
+            border: 2px dashed #d98da9;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #98536f;
+            padding: 10px;
+        }
+
+        .memory-card h3 {
+            color: #a34f72;
+            margin: 15px 0 5px;
+        }
+
+        .memory-card p {
+            color: #765866;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Gayuuu's World 💗</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="letter.html">My Letter</a>
+            <a href="memories.html">Memories</a>
+            <a href="special.html">Special</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="messages.html">Messages</a>
+            <a href="surprise.html">Surprise</a>
+        </div>
+    </nav>
+
+    <main class="memories-page">
+        <h1>Our Little Memory Lane 📸</h1>
+        <p>From childhood madness to today's beautiful memories.</p>
+
+        <div class="memory-card">
+    <div class="photo-frame">
+        <img src="images/childhood.png" alt="Our childhood memory">
+    </div>
+    <h3>Little Us</h3>
+    <p>Two little troublemakers, making memories.</p>
+</div>
+
+            <div class="memory-card">
+               <img src="images/together.png" alt="Our childhood memory"
+     style="width:100%; height:300px; object-fit:contain;
+     border-radius:10px; background:#fce1eb;">
+                <p>We fight, we laugh, and we blame each other!</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/gayatri.png" alt="Gayatri"
+     style="width:100%; height:250px; object-fit:contain; 
+     border-radius:10px; background:#fce1eb;">
+                <p>Every ordinary moment is special with you.</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/both.png" alt="Our special memory"
+     style="width:100%; height:250px; object-fit:contain;
+     border-radius:10px; background:#fce1eb;">
+                <h3>Growing Together</h3>
+                <p>Different ages, same crazy bond.</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 40px;">More memories to come… because our story is still being written. 💗</p>
+        <a href="index.html" class="btn">Back to Home</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
