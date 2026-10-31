@@ -571,3 +571,30 @@ body.dark-mode .birthday-video-frame {
         font-size: 25px;
     }
 }
+/* Sister quote styling */
+.sister-quote {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 45px 30px;
+    text-align: center;
+    background: #fff0f5;
+    border-radius: 25px;
+    color: #71334f;
+}
+
+.sister-quote h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.8;
+    text-transform: none;
+    letter-spacing: 0.3px;
+}
+
+.sister-quote p:last-child {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    margin-top: 20px;
+}
